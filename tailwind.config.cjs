@@ -1,8 +1,24 @@
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	theme: {},
+	theme: {
+		extend: {
+			animation: {
+				typing: 'typing 2s steps(30), blink 1s infinite'
+			},
+			keyframes: {
+				blink: {
+					from: { 'border-right-color': 'transparent' },
+					to: { 'border-right-color': 'white' }
+				},
+				typing: {
+					from: { width: '0' },
+					to: { width: '30ch' }
+				}
+			}
+		}
+	},
 	daisyui: {
-		themes: ['dark', 'light', 'cyberpunk', 'synthwave']
+		themes: ['forest', 'dark', 'light', 'cyberpunk', 'synthwave']
 	},
 	plugins: [
 		require('@tailwindcss/aspect-ratio'),

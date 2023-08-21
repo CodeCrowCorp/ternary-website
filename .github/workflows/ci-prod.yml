@@ -100,7 +100,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages publish ".svelte-kit/cloudflare" --project-name=mage-website
+          command: pages publish ".svelte-kit/cloudflare" --project-name=ternary-website
 
   create-tag:
     if: ${{ github.actor != 'dependabot[bot]' }}
