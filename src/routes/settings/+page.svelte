@@ -3,12 +3,12 @@
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
 
-	let currentTheme: string | null = 'dark'
-	let themes = ['dark', 'light', 'cyberpunk', 'synthwave']
+	let currentTheme: string | null = 'forest'
+	let themes = ['forest', 'dark', 'light', 'cyberpunk', 'synthwave']
 
 	onMount(() => {
 		if (browser) {
-			currentTheme = localStorage.getItem('theme') || 'dark'
+			currentTheme = localStorage.getItem('theme') || 'forest'
 		}
 		themeChange(false)
 	})
